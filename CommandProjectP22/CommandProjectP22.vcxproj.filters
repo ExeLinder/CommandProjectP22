@@ -24,4 +24,9 @@
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
