@@ -130,6 +130,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\..\OneDrive\Рабочий стол\Questions(computers).txt" />
     <Text Include="Questions(Game).txt" />
   </ItemGroup>
   <ItemGroup>

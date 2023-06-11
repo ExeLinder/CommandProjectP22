@@ -23,6 +23,9 @@
     <Text Include="Questions(Game).txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="..\..\..\..\OneDrive\Рабочий стол\Questions(computers).txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
