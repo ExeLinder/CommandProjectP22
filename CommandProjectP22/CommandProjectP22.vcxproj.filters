@@ -18,6 +18,9 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Module.ixx">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Questions(Game).txt">
@@ -26,6 +29,7 @@
     <Text Include="..\..\..\..\OneDrive\Рабочий стол\Questions(computers).txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="Текст.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\README.md">
