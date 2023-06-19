@@ -6,6 +6,11 @@ using namespace std;
 
 char theme[20];
 
+void ShowResult()
+{
+
+}
+
 void ShowQuestion()
 {
 	FILE* fp;
@@ -82,6 +87,8 @@ void Victorina()
 	SelectTheme();
 
 	ShowQuestion();
+
+	ShowResult();
 
 }
 
