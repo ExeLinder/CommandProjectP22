@@ -5,14 +5,12 @@ using namespace std;
 
 char theme[20];
 
-void LoadTheme()
+void ShowQuestion()
 {
-	cout << "¬ведите название темы - ";
 
-	cin >> theme;
 }
 
-void LoadQuestions()
+void SelectTheme()
 {
 	_finddata_t fileinfo;
 	intptr_t ptr;
@@ -31,6 +29,10 @@ void LoadQuestions()
 	_findclose(ptr);
 
 	cout << endl;
+
+	cout << "¬ведите название темы - ";
+
+	cin >> theme;
 }
 
 void Victorina()
@@ -39,11 +41,10 @@ void Victorina()
 
 	cout << "Victorina" << endl << endl;
 
-	LoadQuestions();
+	SelectTheme();
 
-	LoadTheme();
+	ShowQuestion();
 
-	cout << theme;
 }
 
 
