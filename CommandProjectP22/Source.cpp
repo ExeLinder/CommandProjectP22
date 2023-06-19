@@ -5,19 +5,35 @@
 using namespace std;
 
 char theme[20];
+char answerFromUser[25];
+char answerFromFile[25];
+int cnt = 0;
 
 void ShowResult()
 {
+	system("cls");
 
+	cout << "–езультаты викторины - " << cnt << " вопросов:" << endl;
+
+	for (size_t i = 0; i < cnt; i++)
+	{
+		cout << answerFromFile[i]<<" ";
+	}
+
+	cout << endl;
+
+	for (size_t i = 0; i < cnt; i++)
+	{
+		cout << answerFromUser[i] << " ";
+	}
+
+	cout << endl;
 }
 
 void ShowQuestion()
 {
 	FILE* fp;
 	char buff[100];
-	char answerFromUser;
-	char answerFromFile;
-
 	int var1 = _chdir("Questions");
 
 	fopen_s(&fp, theme, "r");
@@ -34,7 +50,7 @@ void ShowQuestion()
 
 				if (i == 5)
 				{
-					answerFromFile = buff[0];
+					answerFromFile[cnt] = buff[0];
 				}
 				else
 				{
@@ -44,7 +60,9 @@ void ShowQuestion()
 
 			cout << "¬ведите ответ - ";
 
-			cin >> answerFromUser;
+			cin >> answerFromUser[cnt];
+
+			cnt++;
 
 		} while (buff[1]!='#');
 
