@@ -8,6 +8,8 @@ char theme[20];
 char answerFromUser[25];
 char answerFromFile[25];
 int cnt = 0;
+char** fileData = nullptr;
+int row;
 
 void ShowResult()
 {
@@ -32,21 +34,12 @@ void ShowResult()
 
 void ShowQuestion()
 {
-	FILE* fp;
-	char buff[100];
-	int var1 = _chdir("Questions");
-
-	fopen_s(&fp, theme, "r");
-
-	if (fp != nullptr)
-	{
 		do
 		{
 			system("cls");
 
 			for (size_t i = 0; i < 6; i++)
 			{
-				fgets(buff, 100, fp);
 
 				if (i == 5)
 				{
@@ -65,9 +58,6 @@ void ShowQuestion()
 			cnt++;
 
 		} while (buff[1]!='#');
-
-		fclose(fp);
-	}
 
 }
 
@@ -96,6 +86,41 @@ void SelectTheme()
 	cin >> theme;
 }
 
+void loadFile()
+{
+	FILE* fp;
+
+	fileData = new char*[100];
+
+	for (size_t i = 0; i < 100; i++)
+	{
+		fileData[i] = new char[100];
+	}
+	
+	int var1 = _chdir("Questions");
+
+	fopen_s(&fp, theme, "r");
+
+
+	if (fp != nullptr)
+	{
+		for (size_t i = 0; i < 100; i++)
+		{
+			fgets(fileData[i], 100, fp);
+
+			row++;
+
+			if ((fileData[i])[1]=='#')
+			{
+				break;
+			}
+			
+		}
+	}
+
+	fclose(fp);
+}
+
 void Victorina()
 {
 	setlocale(LC_ALL, "ru");
@@ -104,9 +129,17 @@ void Victorina()
 
 	SelectTheme();
 
+	loadFile();
+
 	ShowQuestion();
 
-	ShowResult();
+	//ShowResult();
+
+	for (size_t i = 0; i < 100; i++)
+	{
+		delete[] fileData[i];
+	}
+	delete[] fileData;
 
 }
 
