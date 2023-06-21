@@ -34,31 +34,29 @@ void ShowResult()
 
 void ShowQuestion()
 {
-		do
+		system("cls");
+
+		for (size_t i = 0; i < 6; i++)
 		{
-			system("cls");
 
-			for (size_t i = 0; i < 6; i++)
+			if (i == 5)
 			{
-
-				if (i == 5)
-				{
-					answerFromFile[cnt] = buff[0];
-				}
-				else
-				{
-					cout << buff;
-				}
+				answerFromFile[cnt] = (fileData[i])[0];
 			}
+			else
+			{
+				cout << fileData[i];
+			}
+		}
 
-			cout << "¬ведите ответ - ";
+		cout << "¬ведите ответ - ";
 
-			cin >> answerFromUser[cnt];
+		cin >> answerFromUser[cnt];
 
-			cnt++;
+		cnt++;
 
-		} while (buff[1]!='#');
-
+	
+			
 }
 
 void SelectTheme()
