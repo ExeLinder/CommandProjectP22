@@ -114,9 +114,9 @@ void loadFile()
 			}
 			
 		}
-	}
 
-	fclose(fp);
+		fclose(fp);
+	}
 }
 
 void Victorina()
@@ -131,7 +131,7 @@ void Victorina()
 
 	ShowQuestion();
 
-	//ShowResult();
+	ShowResult();
 
 	for (size_t i = 0; i < 100; i++)
 	{
