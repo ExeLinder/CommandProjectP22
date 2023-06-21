@@ -30,6 +30,14 @@ void ShowResult()
 	}
 
 	cout << endl;
+
+
+	/*	Вопрос
+		1. Какая компания разработала игру "Minecraft" ?
+		Ответ игрока
+		a) Microsoft
+		Павильный ответ
+		c) Mojang!*/
 }
 
 void ShowQuestion()
