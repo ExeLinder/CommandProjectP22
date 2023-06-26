@@ -32,7 +32,7 @@ void ShowResult()
 		cout << "Ответ игрока:" << endl;
 		cout << questions[i].question[6];
 
-		if ((questions[i].question[6])[0] == (questions[i].question[5])[0])
+		if (strcmp(questions[i].question[6], questions[i].question[5]) == 0)
 		{
 			cout << "Ответ верный!" << endl;
 		}
@@ -73,7 +73,7 @@ void ShowQuestion()
 			break;
 		case 'd': index = 4;
 			break;
-		default:
+		default: cout << "Не верный выбор";
 			break;
 		}
 
@@ -111,7 +111,6 @@ void SelectTheme()
 void loadFile()
 {
 	FILE* fp;
-
 	int var1 = _chdir("Questions");
 
 	fopen_s(&fp, theme, "r");
@@ -119,18 +118,21 @@ void loadFile()
 
 	if (fp != nullptr)
 	{
-		for (size_t i = 0; i < 30; i++)
+		while (1)
 		{
 			for (size_t j = 0; j < 6; j++)
 			{
 				fgets(questions[questionCounter].question[j], 100, fp);
+
+				if (strcmp(questions[questionCounter].question[j], "#") == 0)
+				{				
+					fclose(fp);
+					return;
+				}
 			}
 
-			i += 5;
 			questionCounter++;
-
 		}
-
 		fclose(fp);
 	}
 }
