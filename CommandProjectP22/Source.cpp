@@ -124,11 +124,13 @@ void loadFile()
 			{
 				fgets(questions[questionCounter].question[j], 100, fp);
 
-				if (strcmp(questions[questionCounter].question[j], "#") == 0)
+				//if ((questions[questionCounter].question[j])[0] == '#')//!!!!!!!!!!!!!!!!!!!!!!!!!
+				if (strcmp(questions[questionCounter].question[j], "#\n") == 0)
 				{				
 					fclose(fp);
 					return;
 				}
+			
 			}
 
 			questionCounter++;
