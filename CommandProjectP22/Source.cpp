@@ -5,11 +5,17 @@
 using namespace std;
 
 char theme[20];
-char answerFromUser[25];
-char answerFromFile[25];
+
 int questionCounter;
-char** fileData = nullptr;
-int row;
+
+
+struct Question
+{
+	char question[7][100];
+};
+
+Question questions[5];
+
 
 void ShowResult()
 {
@@ -17,56 +23,64 @@ void ShowResult()
 
 	cout << "Результаты викторины - " << questionCounter << " вопросов:" << endl;
 
-	for (size_t i = 0; i < questionCounter; i++)
+	for (size_t i = 0; i < 5; i++)
 	{
-		cout << answerFromFile[i]<<" ";
+		cout << "Вопрос:" << endl;
+		cout << questions[i].question[0];
+		cout << "Правильный ответ:" << endl;
+		cout << questions[i].question[5];
+		cout << "Ответ игрока:" << endl;
+		cout << questions[i].question[6];
+
+		if ((questions[i].question[6])[0] == (questions[i].question[5])[0])
+		{
+			cout << "Ответ верный!" << endl;
+		}
+		else
+		{
+			cout << "Ответ не верный!" << endl;
+		}
+		cout << endl;
 	}
 
-	cout << endl;
-
-	for (size_t i = 0; i < questionCounter; i++)
-	{
-		cout << answerFromUser[i] << " ";
-	}
-
-	cout << endl;
-
-
-	/*	Вопрос
-		1. Какая компания разработала игру "Minecraft" ?
-		Ответ игрока
-		a) Microsoft
-		Павильный ответ
-		c) Mojang!*/
 }
 
 void ShowQuestion()
 {
-	for (size_t i = 0; i < row; i++)
+	char ch = 0;
+	int index = 0;
+
+	for (size_t i = 0; i < 5; i++)
 	{
 		system("cls");
 
-		for (size_t j = 0; j < 6; j++)
+		for (size_t j = 0; j < 5; j++)
 		{
-			if (j==5)
-			{
-				answerFromFile[questionCounter] = (fileData[i+j])[0];
-			}
-			else
-			{
-				cout << fileData[i + j];
-			}
+			cout << questions[i].question[j];
 		}
-
-		i += 5;
 
 		cout << "Введите ответ - ";
 
-		cin >> answerFromUser[questionCounter];
+		cin >> ch;
 
-		questionCounter++;
+		switch (ch)
+		{
+		case 'a': index = 1;
+			break;
+		case 'b': index = 2;
+			break;
+		case 'c': index = 3;
+			break;
+		case 'd': index = 4;
+			break;
+		default:
+			break;
+		}
+
+		strcpy_s(questions[i].question[6], 100, questions[i].question[index]);
+
 	}
-	
+
 }
 
 void SelectTheme()
@@ -98,13 +112,6 @@ void loadFile()
 {
 	FILE* fp;
 
-	fileData = new char* [100];
-
-	for (size_t i = 0; i < 100; i++)
-	{
-		fileData[i] = new char[100];
-	}
-
 	int var1 = _chdir("Questions");
 
 	fopen_s(&fp, theme, "r");
@@ -112,16 +119,15 @@ void loadFile()
 
 	if (fp != nullptr)
 	{
-		for (size_t i = 0; i < 100; i++)
+		for (size_t i = 0; i < 30; i++)
 		{
-			fgets(fileData[i], 100, fp);
-
-			row++;
-
-			if ((fileData[i])[1] == '#')
+			for (size_t j = 0; j < 6; j++)
 			{
-				break;
+				fgets(questions[questionCounter].question[j], 100, fp);
 			}
+
+			i += 5;
+			questionCounter++;
 
 		}
 
@@ -142,20 +148,11 @@ void Victorina()
 	ShowQuestion();
 
 	ShowResult();
-
-	for (size_t i = 0; i < 100; i++)
-	{
-		delete[] fileData[i];
-	}
-	delete[] fileData;
-
 }
 
 
 int main()
 {
-
 	Victorina();
-
 
 }
