@@ -14,8 +14,39 @@ struct Question
 	char question[7][100];
 };
 
-Question questions[5];
+Question questions[10];
 
+Question* arr = nullptr;
+
+int arrSize = 0;
+
+
+Question* dinArr(Question* arr, int& arrSize, Question val)
+{
+	Question* tmp = nullptr;
+
+	if (arrSize == 0)
+	{
+		tmp = new Question;
+		tmp[0] = val;
+	}
+	else
+	{
+		tmp = new Question[arrSize + 1];
+
+		for (size_t i = 0; i < arrSize; i++)
+		{
+			tmp[i] = arr[i];
+		}
+		tmp[arrSize] = val;
+
+		delete[]arr;
+	}
+
+	arrSize++;
+
+	return tmp;
+}
 
 void ShowResult()
 {
@@ -23,7 +54,7 @@ void ShowResult()
 
 	cout << "Результаты викторины - " << questionCounter << " вопросов:" << endl;
 
-	for (size_t i = 0; i < 5; i++)
+	for (size_t i = 0; i < questionCounter; i++)
 	{
 		cout << "Вопрос:" << endl;
 		cout << questions[i].question[0];
@@ -50,7 +81,7 @@ void ShowQuestion()
 	char ch = 0;
 	int index = 0;
 
-	for (size_t i = 0; i < 5; i++)
+	for (size_t i = 0; i < questionCounter; i++)
 	{
 		system("cls");
 
@@ -115,29 +146,32 @@ void loadFile()
 
 	fopen_s(&fp, theme, "r");
 
+	Question tmp;
 
 	if (fp != nullptr)
 	{
 		while (1)
 		{
-			for (size_t j = 0; j < 6; j++)
+			for (size_t i = 0; i < 6; i++)
 			{
-				fgets(questions[questionCounter].question[j], 100, fp);
+				fgets(tmp.question[i], 100, fp);
 
-				//if ((questions[questionCounter].question[j])[0] == '#')//!!!!!!!!!!!!!!!!!!!!!!!!!
-				if (strcmp(questions[questionCounter].question[j], "#\n") == 0)
-				{				
+				if (strstr(tmp.question[i], "#"))
+				{
 					fclose(fp);
 					return;
 				}
-			
 			}
+
+			questions[questionCounter] = tmp;
+
+			arr = dinArr(arr, arrSize, tmp);
 
 			questionCounter++;
 		}
 		fclose(fp);
 	}
-}
+};
 
 void Victorina()
 {
