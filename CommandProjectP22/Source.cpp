@@ -19,15 +19,15 @@ void ShowResult()
 
 	for (size_t i = 0; i < cnt; i++)
 	{
-		cout << "\t" << i + 1 << endl;
-		cout << "Answer: ";
-		cout << answerFromFile[i] << " " << endl;
-		cout << "Answer from user: ";
-		cout << answerFromUser[i] << " " << endl;
+		cout << answerFromFile[i]<<" ";
 	}
 
 	cout << endl;
 
+	for (size_t i = 0; i < cnt; i++)
+	{
+		cout << answerFromUser[i] << " ";
+	}
 
 	cout << endl;
 }
@@ -35,39 +35,25 @@ void ShowResult()
 void ShowQuestion()
 {
 		system("cls");
-		int questionS = 0;
-		int questionE = 6;
-		int answer = 5;
-		int out = 1;
-		do{
-			
-				for (int i = questionS; i < questionE; i++)
-				{
 
-					if (i == answer)
-					{
-						answerFromFile[cnt] = (fileData[i])[0];
-					}
-					else
-					{
-						cout << fileData[i];
-					}
-					if (fileData[i][1] == '#') {
-						out = 0;
-						break;
-					}
-				}
-				questionE += 6;
-				questionS += 6;
-				answer += 6;
-				cout << "¬ведите ответ - ";
+		for (size_t i = 0; i < 6; i++)
+		{
 
-				cin >> answerFromUser[cnt];
+			if (i == 5)
+			{
+				answerFromFile[cnt] = (fileData[i])[0];
+			}
+			else
+			{
+				cout << fileData[i];
+			}
+		}
 
-				cnt++;
-			}while (out == 1);
-		
+		cout << "¬ведите ответ - ";
 
+		cin >> answerFromUser[cnt];
+
+		cnt++;
 
 	
 			
