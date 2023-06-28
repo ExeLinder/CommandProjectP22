@@ -4,24 +4,18 @@
 #include<Windows.h>
 using namespace std;
 
-char theme[20];
-
-int questionCounter;
-
 
 struct Question
 {
 	char question[7][100];
 };
 
-Question questions[10];
 
-Question* arr = nullptr;
+Question* questions = nullptr;
+char theme[20];
+int questionCounter;
 
-int arrSize = 0;
-
-
-Question* dinArr(Question* arr, int& arrSize, Question val)
+Question* dinArr(Question* arr, int& arrSize, Question& val)
 {
 	Question* tmp = nullptr;
 
@@ -80,38 +74,40 @@ void ShowQuestion()
 {
 	char ch = 0;
 	int index = 0;
+	bool choice = false;
 
 	for (size_t i = 0; i < questionCounter; i++)
 	{
 		system("cls");
-
-		for (size_t j = 0; j < 5; j++)
+		do
 		{
-			cout << questions[i].question[j];
-		}
+			for (size_t j = 0; j < 5; j++)
+			{
+				cout << questions[i].question[j];
+			}
 
-		cout << "Введите ответ - ";
+			cout << "Введите ответ - ";
 
-		cin >> ch;
+			cin >> ch;
 
-		switch (ch)
-		{
-		case 'a': index = 1;
-			break;
-		case 'b': index = 2;
-			break;
-		case 'c': index = 3;
-			break;
-		case 'd': index = 4;
-			break;
-		default: cout << "Не верный выбор";
-			break;
-		}
+			switch (ch)
+			{
+			case 'a': index = 1; choice = true;
+				break;
+			case 'b': index = 2; choice = true;
+				break;
+			case 'c': index = 3; choice = true;
+				break;
+			case 'd': index = 4; choice = true;
+				break;
+			default: system("cls"); cout << "Выбор не верный" << endl; choice = false;
+				break;
+			}
+		} while (!choice);
 
 		strcpy_s(questions[i].question[6], 100, questions[i].question[index]);
 
 	}
-
 }
 
 void SelectTheme()
@@ -163,11 +159,8 @@ void loadFile()
 				}
 			}
 
-			questions[questionCounter] = tmp;
+			questions = dinArr(questions, questionCounter, tmp);
 
-			arr = dinArr(arr, arrSize, tmp);
-
-			questionCounter++;
 		}
 		fclose(fp);
 	}
@@ -186,11 +179,12 @@ void Victorina()
 	ShowQuestion();
 
 	ShowResult();
+
+	delete[] questions;
 }
 
 
 int main()
 {
 	Victorina();
-
 }
