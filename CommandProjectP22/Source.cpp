@@ -7,7 +7,7 @@ using namespace std;
 char theme[20];
 char answerFromUser[25];
 char answerFromFile[25];
-int cnt = 0;
+int questionCounter;
 char** fileData = nullptr;
 int row;
 
@@ -15,48 +15,58 @@ void ShowResult()
 {
 	system("cls");
 
-	cout << "Результаты викторины - " << cnt << " вопросов:" << endl;
+	cout << "Результаты викторины - " << questionCounter << " вопросов:" << endl;
 
-	for (size_t i = 0; i < cnt; i++)
+	for (size_t i = 0; i < questionCounter; i++)
 	{
 		cout << answerFromFile[i]<<" ";
 	}
 
 	cout << endl;
 
-	for (size_t i = 0; i < cnt; i++)
+	for (size_t i = 0; i < questionCounter; i++)
 	{
 		cout << answerFromUser[i] << " ";
 	}
 
 	cout << endl;
+
+
+	/*	Вопрос
+		1. Какая компания разработала игру "Minecraft" ?
+		Ответ игрока
+		a) Microsoft
+		Павильный ответ
+		c) Mojang!*/
 }
 
 void ShowQuestion()
 {
+	for (size_t i = 0; i < row; i++)
+	{
 		system("cls");
 
-		for (size_t i = 0; i < 6; i++)
+		for (size_t j = 0; j < 6; j++)
 		{
-
-			if (i == 5)
+			if (j==5)
 			{
-				answerFromFile[cnt] = (fileData[i])[0];
+				answerFromFile[questionCounter] = (fileData[i+j])[0];
 			}
 			else
 			{
-				cout << fileData[i];
+				cout << fileData[i + j];
 			}
 		}
 
+		i += 5;
+
 		cout << "Введите ответ - ";
 
-		cin >> answerFromUser[cnt];
+		cin >> answerFromUser[questionCounter];
 
-		cnt++;
-
+		questionCounter++;
+	}
 	
-			
 }
 
 void SelectTheme()
@@ -88,13 +98,13 @@ void loadFile()
 {
 	FILE* fp;
 
-	fileData = new char*[100];
+	fileData = new char* [100];
 
 	for (size_t i = 0; i < 100; i++)
 	{
 		fileData[i] = new char[100];
 	}
-	
+
 	int var1 = _chdir("Questions");
 
 	fopen_s(&fp, theme, "r");
@@ -108,11 +118,11 @@ void loadFile()
 
 			row++;
 
-			if ((fileData[i])[1]=='#')
+			if ((fileData[i])[1] == '#')
 			{
 				break;
 			}
-			
+
 		}
 
 		fclose(fp);
