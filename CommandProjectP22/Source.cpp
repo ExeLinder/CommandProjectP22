@@ -16,38 +16,6 @@ struct Question
 
 Question questions[10];
 
-Question* arr = nullptr;
-
-int arrSize = 0;
-
-
-Question* dinArr(Question* arr, int& arrSize, Question val)
-{
-	Question* tmp = nullptr;
-
-	if (arrSize == 0)
-	{
-		tmp = new Question;
-		tmp[0] = val;
-	}
-	else
-	{
-		tmp = new Question[arrSize + 1];
-
-		for (size_t i = 0; i < arrSize; i++)
-		{
-			tmp[i] = arr[i];
-		}
-		tmp[arrSize] = val;
-
-		delete[]arr;
-	}
-
-	arrSize++;
-
-	return tmp;
-}
-
 void ShowResult()
 {
 	system("cls");
@@ -164,8 +132,6 @@ void loadFile()
 			}
 
 			questions[questionCounter] = tmp;
-
-			arr = dinArr(arr, arrSize, tmp);
 
 			questionCounter++;
 		}
