@@ -1,59 +1,65 @@
-1) Какой аниме-сериал является самым длинным по количеству выпущенных эпизодов?
-а) Naruto
-б) Once Upon a Time
-++в) One Piece
-г) Bleach
+1. Which anime features a main character named Luffy?
+a) Naruto
+b) One Piece
+c) Attack on Titan
+d) Bleach
+b
+2. Which anime features school students piloting giant robots?
+a) Neon Genesis Evangelion
+b) Naruto
+c) One Piece
+d) Death Note
+a
+3. In which anime does the protagonist use a death-causing notebook?
+a) Naruto
+b) One Piece
+c) Death Note
+d) Bleach
+c
+4. Which anime features a soul-reaping Shinigami as the protagonist?
+a) Naruto
+b) One Piece
+c) Death Note
+d) Bleach
+d
+5. In which anime does the protagonist aspire to become the Hokage, the leader of their village?
+a) Naruto
+b) One Piece
+c) Death Note
+d) Bleach
+a
+6. Which anime features a Super Saiyan transformation?
+a) Naruto
+b) One Piece
+c) Dragon Ball Z
+d) Bleach
+c
+7. In which anime does the protagonist have Sharingan eyes?
+a) Naruto
+b) One Piece
+c) Death Note
+d) Bleach
+a
+8. Which anime is set in a virtual reality game?
+a) Naruto
+b) One Piece
+c) Sword Art Online
+d) Bleach
+c
+9. Which anime is set in a world overrun by Titans?
+a) Attack on Titan
+b) One Piece
+c) Death Note
+d) Bleach
+a
+10. In which anime does the protagonist seek the treasure, One Piece?
+a) Naruto
+b) One Piece
+c) Death Note
+d) Bleach
+b#
 
-2) В каком аниме главный герой - алхимик?
-а) One Piece
-++б) Fullmetal Alchemist
-в) Demon Slayer
-г) Pokémon
 
-3) Как называется титул самого сильного чемпиона в аниме "My Hero Academia"?
-а) Алмазный Чемпион
-б) Герой номер один
-++в) Symbol of Peace
-г) Эгида щита
 
-4) В каком аниме группа детей вынуждена сражаться с титанами ради выживания человечества?
-++а) Attack on Titan
-б) Black Clover
-в) Tokyo Ghoul
-г) Devilman Crybaby
-
-5) В каком аниме герой использует тетрадь смерти для наказания злодеев?
-а) Akame ga KILL!
-б) Naruto
-++в) Death Note
-г) Attack on Titan
-
-6) Какой герой аниме обладает рефлексами семи котов и сверхъестественными способностями?
-а) Саитама (One Punch Man)
-б) Лелуш (Code Geass)
-++в) Нацу (Fairy Tail)
-г) Light Yagami (Death Note)
-
-7) В каком аниме герой пробуждает свою способность потребления групповых мобов после смерти?
-а) Blue Exorcist
-б) Kuroko no Basket
-++в) Re: Zero
-г) No game - no life
-
-8) В какой японской аниме-франшизе есть герои с такими яркими "суперспособностями", как огненный меч и ледяная кирка?
-а) Akame ga KILL!
-б) Naruto
-++в) Bleach
-г) Boruto
-
-9) Какое аниме является первоисточником мема "ясясыыыы "-кошка"?
-а) Funk
-б) Robot Girl
-++в) Pop Team Epic
-г) Etchy Waver
-
-10) В каком аниме главные специализируются на дуэлях, используя карточные элементы?
-а) Dragon Ball Z
-б) Yuri on Ice
-++в) Cardcaptor Sakura
-г) JoJo's Bizarre Adventure
+///////////////////////////////////////////////////////////////////////
+(Символ (#) - завершение цикла вопросов )
