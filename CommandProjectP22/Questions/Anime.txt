@@ -1,65 +1,65 @@
-1. Which anime features a main character named Luffy?
-a) Naruto
-b) One Piece
-c) Attack on Titan
-d) Bleach
+1. В каком аниме есть главный герой по имени Луффи?
+a) Наруто
+b) Ван Пис
+c) Атака Титанов
+d) Блич
 b
-2. Which anime features school students piloting giant robots?
-a) Neon Genesis Evangelion
-b) Naruto
-c) One Piece
-d) Death Note
+2. В каком аниме школьники пилотируют гигантских роботов?
+a) Евангелион
+b) Наруто
+c) Ван Пис
+d) Тетрадь смерти
 a
-3. In which anime does the protagonist use a death-causing notebook?
-a) Naruto
-b) One Piece
-c) Death Note
-d) Bleach
+3. В каком аниме главный герой использует смертельный блокнот?
+a) Наруто
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 c
-4. Which anime features a soul-reaping Shinigami as the protagonist?
-a) Naruto
-b) One Piece
-c) Death Note
-d) Bleach
+4. В каком аниме главным героем является пожинающий души синигами?
+a) Наруто
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 d
-5. In which anime does the protagonist aspire to become the Hokage, the leader of their village?
-a) Naruto
-b) One Piece
-c) Death Note
-d) Bleach
+5. В каком аниме главный герой стремится стать Хокаге, лидером своей деревни?
+a) Наруто
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 a
-6. Which anime features a Super Saiyan transformation?
-a) Naruto
-b) One Piece
-c) Dragon Ball Z
-d) Bleach
+6. В каком аниме есть трансформация Супер Сайяна?
+a) Наруто
+b) Ван Пис
+c) Драган Бол Z
+d) Блич
 c
-7. In which anime does the protagonist have Sharingan eyes?
-a) Naruto
-b) One Piece
-c) Death Note
-d) Bleach
+7. В каком аниме у главного героя глаза Шарингана?
+a) Наруто
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 a
-8. Which anime is set in a virtual reality game?
-a) Naruto
-b) One Piece
-c) Sword Art Online
-d) Bleach
+8. Действие какого аниме происходит в игре виртуальной реальности?
+a) Наруто
+b) Ван Пис
+c) Мастера Мечя Онлайн
+d) Блич
 c
-9. Which anime is set in a world overrun by Titans?
-a) Attack on Titan
-b) One Piece
-c) Death Note
-d) Bleach
+9. Действие какого аниме происходит в мире, захваченном Титанами?
+a) Атака Титанов
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 a
-10. In which anime does the protagonist seek the treasure, One Piece?
-a) Naruto
-b) One Piece
-c) Death Note
-d) Bleach
+10. В каком аниме главный герой ищет сокровища, One Piece?
+a) Наруто
+b) Ван Пис
+c) Тетрадь смерти
+d) Блич
 b#
 
 
 
 ///////////////////////////////////////////////////////////////////////
-(РЎРёРјРІРѕР» (#) - Р·Р°РІРµСЂС€РµРЅРёРµ С†РёРєР»Р° РІРѕРїСЂРѕСЃРѕРІ )
+(Символ (#) - завершение цикла вопросов )
